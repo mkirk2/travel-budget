@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TravelPlanner</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <h1 align="center"><%= link_to "Plan My Trip", "/", class:"header-heading" %></h1>
+    <br>
+  <div class="header-links col-md-12">
+      <div class="row">
+        
+      <% if user_signed_in? %>
+        <h4 id="header-links" class="col-md"><%= link_to "New Trip", "/new_trip/", class:"link-design" %></h4>
+        <h4 id="header-links" class="col-md"><%= link_to "Past Trips", "/past_trips", class:"link-design" %></h4>
+        <h4 id="header-links" class="col-md"><%= link_to "Current Trip", "/current_trip", class:"link-design" %></h4>
+        <h4 id="header-links" class="col-md"><%= link_to "My settings", edit_user_registration_path, class:"link-design" %></h4>
+        <h4 id="header-links" class="col-md"><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"link-design" %></h4>
+      <% else %>
+        <h4 class="col-md"></h4>
+        <h4 class="col-md"></h4>
+        <h4 class="col-md"></h4>
+        <h4 id="header-links" class="col-md"><%= link_to "Sign up", new_user_registration_path, class:"link-design" %></h4>
+    	  <h4 id="header-links" class="col-md"><%= link_to "Login", new_user_session_path, class:"link-design" %></h4>
+      <% end %>
+      </div>
+    </div>
+    <br>
+    <br>
+    <%= yield %>
+  </body>
+</html>
