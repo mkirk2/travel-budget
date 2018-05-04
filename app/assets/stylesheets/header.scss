@@ -25,10 +25,16 @@ a.header-heading:hover {
 }
 
 div.left-links {
-    width:30%;
+    width:40%;
 }
 
 div.right-links {
-    width:70%;
+    width:60%;
     float:right;
+    padding-bottom: 20px;
+    border-bottom: solid black 2px;
+}
+
+.plane {
+    margin-left:20px;
 }

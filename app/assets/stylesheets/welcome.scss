@@ -32,14 +32,24 @@ div.welcome-form-padding {
     padding-left:15%;
 }
 
-div.welcome-form {
+form.welcome-form {
     position: absolute;
     padding:30px;
-    background-color:#d4d4d6;
+    background-color:$grey1;
     width:70%;
     border-left: solid $turquoise1 30px;
 }
 
-button.welcome-submit {
-    background-color: $turquoise1;
+button.welcome-buttons {
+    background-color: $white1;
+    color: $black1;
+}
+
+.welcome-output {
+    display:none;
+    background-color: black;
+    color: $grey1;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
 }
