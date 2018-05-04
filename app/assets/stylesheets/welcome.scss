@@ -28,23 +28,6 @@ img.pano-img-welcome {
     padding-left:40px;
 }
 
-div.welcome-form-padding {
-    padding-left:15%;
-}
-
-form.welcome-form {
-    position: absolute;
-    padding:30px;
-    background-color:$grey1;
-    width:70%;
-    border-left: solid $turquoise1 30px;
-}
-
-button.welcome-buttons {
-    background-color: $white1;
-    color: $black1;
-}
-
 .welcome-output {
     display:none;
     background-color: black;

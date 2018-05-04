@@ -1,0 +1,16 @@
+div.all-form-padding {
+    padding-left:15%;
+}
+
+form.all-forms {
+    position: absolute;
+    padding:30px;
+    background-color:$grey1;
+    width:70%;
+    border-left: solid $turquoise1 30px;
+}
+
+button.all-form-buttons {
+    background-color: $white1;
+    color: $black1;
+}
