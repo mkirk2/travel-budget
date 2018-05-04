@@ -1,6 +1,14 @@
+div.header-total {
+    padding-right:50px;
+    padding-left:50px;
+    overflow: hidden;
+}
+
 a.link-design {
     color:black;
-    text-align: center;
+    font-size:13px;
+    float:right;
+    padding-left:40px;
 }
 
 a.link-design:hover {
@@ -9,12 +17,18 @@ a.link-design:hover {
 
 a.header-heading {
     color:black;
+    float:left;
 }
 
 a.header-heading:hover {
     text-decoration: none;
 }
 
-h4#header-links {
-    text-align: center;
+div.left-links {
+    width:30%;
+}
+
+div.right-links {
+    width:70%;
+    float:right;
 }

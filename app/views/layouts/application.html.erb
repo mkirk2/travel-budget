@@ -8,30 +8,34 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-
-  <h1 align="center"><%= link_to "Plan My Trip", "/", class:"header-heading" %></h1>
-    <br>
-  <div class="header-links col-md-12">
-      <div class="row">
-        
+  <body><br>
+  
+    <div class="row header-total">
       <% if user_signed_in? %>
-        <h4 id="header-links" class="col-md"><%= link_to "New Trip", "/new_trip/", class:"link-design" %></h4>
-        <h4 id="header-links" class="col-md"><%= link_to "Past Trips", "/past_trips", class:"link-design" %></h4>
-        <h4 id="header-links" class="col-md"><%= link_to "Current Trip", "/current_trip", class:"link-design" %></h4>
-        <h4 id="header-links" class="col-md"><%= link_to "My settings", edit_user_registration_path, class:"link-design" %></h4>
-        <h4 id="header-links" class="col-md"><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"link-design" %></h4>
+        <div class="left-links">
+          <h3><%= link_to "Plan My Trip", "/", class:"header-heading" %><i class="far fa-paper-plane"></i></h3>
+        </div>
+        <div class="right-links">
+          <p></p>
+          <p id="header-links" ><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"link-design" %></p>
+          <p id="header-links" ><%= link_to "My Settings", edit_user_registration_path, class:"link-design" %></p>
+          <p id="header-links" ><%= link_to "Current Trip", "/current_trip", class:"link-design" %></p>
+          <p id="header-links" ><%= link_to "Past Trips", "/past_trips", class:"link-design" %></p>
+          <p id="header-links" ><%= link_to "New Trip", "/new_trip", class:"link-design" %></p>
+        </div>
       <% else %>
-        <h4 class="col-md"></h4>
-        <h4 class="col-md"></h4>
-        <h4 class="col-md"></h4>
-        <h4 id="header-links" class="col-md"><%= link_to "Sign up", new_user_registration_path, class:"link-design" %></h4>
-    	  <h4 id="header-links" class="col-md"><%= link_to "Login", new_user_session_path, class:"link-design" %></h4>
+        <div class="left-links">
+          <h3><%= link_to "Plan My Trip", "/", class:"header-heading" %><i class="far fa-paper-plane"></i></h3>
+        </div>
+        <div class="right-links">
+          <p></p>
+          <p id="header-links" ><%= link_to "Sign up", new_user_registration_path, class:"link-design" %></p>
+          <p id="header-links" ><%= link_to "Login", new_user_session_path, class:"link-design" %></p>
+        </div>
       <% end %>
-      </div>
     </div>
-    <br>
-    <br>
+   <br>
     <%= yield %>
+    
   </body>
 </html>

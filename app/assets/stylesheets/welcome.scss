@@ -1,3 +1,45 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    padding-left:40px;
+}
+
+div.white-box {
+    width: 100%;
+    z-index: -2;
+}
+
+div.turquoise-box {
+    width: 30%;
+    float: right;
+    background-color: $turquoise1;
+    height: 1000px;
+    z-index: -1;
+}
+
+p.welcome-text {
+    font-size:18px;
+    width:40%;
+}
+
+img.pano-img-welcome {
+    width:85%;
+    z-index: 1;
+    position: absolute;
+    float:right;
+    padding-left:40px;
+}
+
+div.welcome-form-padding {
+    padding-left:15%;
+}
+
+div.welcome-form {
+    position: absolute;
+    padding:30px;
+    background-color:#d4d4d6;
+    width:70%;
+    border-left: solid $turquoise1 30px;
+}
+
+button.welcome-submit {
+    background-color: $turquoise1;
+}
