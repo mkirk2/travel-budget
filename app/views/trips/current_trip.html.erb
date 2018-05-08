@@ -3,4 +3,41 @@
     </div>
     <br><br><h3>Check the budget of your current trip</h3><br><br>
 
+    <% if @current_trip %>
+        <% @current_trip.name %>
+    <% else %>
+        You have no current trips. Time to get planning! <br> <br>
+       
+        <div class="no-current-trips">
+            <p class="no-current-trips-text"> Here's some inspiration. <p>
+            
+            <div class="card right-image-no-current">
+                <div class="card-body navbar-transparent">
+                    <p class="card-text philippines-text">Boracay, The Philippines</p>
+                </div>
+                <img class="card-img-top philippines-img" src="http://res.cloudinary.com/djx0t6jww/image/upload/v1525729059/travel%20images/IMG_0870.jpg" alt="philippines">
+            </div>
+        </div> <br><br><br><br><br><br><br><br><br><br><br>
+        <div class="card left-image-no-current">
+            <div class="card-body navbar-transparent">
+                <p class="card-text peru-text">The Andes, Peru</p>
+            <img class="card-img-top" src="http://res.cloudinary.com/djx0t6jww/image/upload/a_0/v1525729145/travel%20images/IMG_0917.jpg" alt="The Andes, Peru">
+            </div>
+        </div>
+        <div class="card pano-image-no-current">
+            <div class="card-body navbar-transparent">
+                <p class="card-text myanmar-text">Bagan, Myanmar</p>
+            <img class="card-img-top" src="http://res.cloudinary.com/djx0t6jww/image/upload/v1523721414/travel%20panoramas/IMG_1445.jpg" alt="The Andes, Peru">
+            </div>
+        </div><br><br><br><br><br>
+        <div class="card china-img-no-current">
+            <img class="card-img-top china-img" src="http://res.cloudinary.com/djx0t6jww/image/upload/v1525728978/travel%20images/IMG_1361.jpg" alt="china">
+            <div class="card-body navbar-transparent">
+                <p class="card-text china-text">The Great Wall of China</p>
+            </div>
+        </div>
+    </div>
+
+    <% end %>
+
 </div>

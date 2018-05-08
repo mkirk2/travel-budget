@@ -1,6 +1,7 @@
 $( document ).ready(function() {
     $( "#welcome-submit" ).click(function(event) {
         event.preventDefault();
+        console.log("working")
         $( "#welcome-output" ).show();
         var input1 = parseInt($("#budget-total").val());
         var input2 = parseInt($("#length-total").val());

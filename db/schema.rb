@@ -13,10 +13,13 @@
 ActiveRecord::Schema.define(version: 20180502212414) do
 
   create_table "trips", force: :cascade do |t|
+    t.integer "user_id"
     t.string "name"
     t.integer "budget"
     t.date "start_date"
     t.date "end_date"
+    t.integer "daily_budget"
+    t.integer "total_days"
   end
 
   create_table "users", force: :cascade do |t|
