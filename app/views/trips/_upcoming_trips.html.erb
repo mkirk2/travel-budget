@@ -1,0 +1,27 @@
+<h3>View your upcoming trips</h3><br><br>
+
+    <% @upcoming_trips.each do |trip| %>
+        <br>
+    <table class="table current-table">
+        <thead class="thead-light current-table-head">
+            <tr>
+                <th scope="col">Trip name</th>
+                <th scope="col">Trip budget</th>
+                <th scope="col">Trip start</th>
+                <th scope="col">Trip length</th>
+                <th scope="col">Your daily budget</th>
+                <th scope="col">Money spent</th>
+            </tr>
+        </thead>
+        <tbody class="current-table-body">
+            <tr>
+                <td><%= trip.name %></td>
+                <td><%= trip.budget %></td>
+                <td><%= trip.start_date %></td>
+                <td><%= trip.total_days %></td>
+                <td><%= trip.daily_budget %></td>
+                <td><%= trip.spend_count %></td>
+            </tr>
+        </tbody>
+    </table><br><br><br><br>
+    <% end %>

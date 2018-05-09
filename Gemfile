@@ -22,6 +22,8 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.0.9'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'httparty', '~> 0.13.7'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -42,6 +44,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails', '~> 0.3.6'
 end
 
 group :development do

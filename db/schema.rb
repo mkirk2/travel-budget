@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180502212414) do
     t.date "end_date"
     t.integer "daily_budget"
     t.integer "total_days"
+    t.integer "spend_count", default: 0
   end
 
   create_table "users", force: :cascade do |t|

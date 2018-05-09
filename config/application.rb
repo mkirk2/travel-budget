@@ -16,3 +16,9 @@ module TravelPlanner
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+Bundler.require(*Rails.groups)
+
+Dotenv::Railtie.load
+
+HOSTNAME = ENV['HOSTNAME']

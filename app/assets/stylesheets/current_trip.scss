@@ -1,5 +1,30 @@
 //if user has current trip/s CSS
 
+.current-table {
+    width: 80%;
+    position: absolute;
+    text-align: center;
+    border: solid 1px;
+    border-color: $turquoise1;
+    margin-left:5%;
+}
+
+.current-table-body {
+    background-color: white;
+}
+
+.current-info {
+    margin-left:5%
+}
+
+.spend-count-input {
+    width:50%;
+    margin-left:5%;
+}
+
+.spend-count-text {
+    margin-left:5%;
+}
 
 //if user has no current trips CSS
 

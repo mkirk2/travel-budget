@@ -19,8 +19,7 @@
           <p></p>
           <p id="header-links" ><%= link_to "Logout", destroy_user_session_path, method: :delete, class:"link-design" %></p>
           <p id="header-links" ><%= link_to "My Settings", edit_user_registration_path, class:"link-design" %></p>
-          <p id="header-links" ><%= link_to "Current Trip", "/current_trip", class:"link-design" %></p>
-          <p id="header-links" ><%= link_to "Past Trips", "/past_trips", class:"link-design" %></p>
+          <p id="header-links" ><%= link_to "Your Trips", "/trips", class:"link-design" %></p>
           <p id="header-links" ><%= link_to "New Trip", "/new_trip", class:"link-design" %></p>
         </div>
       <% else %>

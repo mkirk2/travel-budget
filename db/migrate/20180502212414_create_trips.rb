@@ -8,6 +8,7 @@ class CreateTrips < ActiveRecord::Migration[5.1]
       t.date :end_date
       t.integer :daily_budget
       t.integer :total_days
+      t.integer :spend_count, :default => 0
     end
   end
 end

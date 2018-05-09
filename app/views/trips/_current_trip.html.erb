@@ -1,0 +1,43 @@
+<br><br><h3>Check the budget of your current trip</h3><br><br>
+
+
+    <br> 
+    <% @current_trips.each do |trip| %>
+    <table class="table current-table">
+        <thead class="thead-light current-table-head">
+            <tr>
+                <th scope="col">Trip name</th>
+                <th scope="col">Trip budget</th>
+                <th scope="col">Trip length</th>
+                <th scope="col">Your daily budget</th>
+                <th scope="col">Days remaining</th>
+                <th scope="col">Money spent total</th>
+            </tr>
+        </thead>
+        <tbody class="current-table-body">
+            <tr>
+                <td><%= trip.name %></td>
+                <td><%= trip.budget %></td>
+                <td><%= trip.total_days %></td>
+                <td><%= trip.daily_budget %></td>
+                <td><%= %></td>
+                <td><%= trip.spend_count %></td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br><br><br><br>
+    <h5 class="spend-count-text">Every time you spend make sure you record it here:</p><h5><br>
+    <div class="input-group spend-count-input">
+        <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+        </div>
+    </div>
+    <br><br><br><br>
+    <% end %>
+
+
+

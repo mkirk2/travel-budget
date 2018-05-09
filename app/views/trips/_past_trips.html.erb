@@ -1,0 +1,28 @@
+
+    <br><br><br><br><h3>View your past trips</h3>
+
+
+        <br> 
+        <% @past_trips.each do |trip| %>
+            <br><br>
+        <table class="table current-table">
+            <thead class="thead-light current-table-head">
+                <tr>
+                    <th scope="col">Trip name</th>
+                    <th scope="col">Trip budget</th>
+                    <th scope="col">Trip length</th>
+                    <th scope="col">Your daily budget</th>
+                    <th scope="col">Budget remaining</th>
+                </tr>
+            </thead>
+            <tbody class="current-table-body">
+                <tr>
+                    <td><%= trip.name %></td>
+                    <td><%= trip.budget %></td>
+                    <td><%= trip.total_days %></td>
+                    <td><%= trip.daily_budget %></td>
+                    <td><%= trip.budget - trip.spend_count %></td>
+                </tr>
+            </tbody>
+        </table><br><br><br>
+    <% end %>

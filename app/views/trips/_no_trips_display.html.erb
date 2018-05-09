@@ -1,16 +1,8 @@
-<div class="white-box">
-    <div class="turquoise-box">
-    </div>
-    <br><br><h3>Check the budget of your current trip</h3><br><br>
-
-    <% if @current_trip %>
-        <% @current_trip.name %>
-    <% else %>
-        You have no current trips. Time to get planning! <br> <br>
+<br><br><h3> You have no past trips. Time to get planning! </h3><br> <br>
        
-        <div class="no-current-trips">
-            <p class="no-current-trips-text"> Here's some inspiration. <p>
-            
+    <div class="no-current-trips">
+        <p class="no-current-trips-text"> Here is some inspiration for you. <p>
+        
             <div class="card right-image-no-current">
                 <div class="card-body navbar-transparent">
                     <p class="card-text philippines-text">Boracay, The Philippines</p>
@@ -37,7 +29,3 @@
             </div>
         </div>
     </div>
-
-    <% end %>
-
-</div>

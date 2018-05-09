@@ -1,25 +1,22 @@
 class TripsController < ApplicationController
 
     def index
+        @current_trips = Trip.belongs_to_user(current_user).current_trips
+        @past_trips = Trip.belongs_to_user(current_user).past_trips
+        @upcoming_trips = Trip.belongs_to_user(current_user).upcoming_trips
     end
     def create
         @trip = Trip.new(trip_params)
         @trip.user_id = current_user.id
         @trip.save
-        redirect_to "/current_trip"
+        redirect_to "/trips"
     end
     def show
         @trip = Trip.find(params[:id])
     end
     def edit
-        
     end
     def new_trip
-    end
-    def current_trip
-        Trip.where("start_date <= ? and end_date >= ?", Date.today,Date.today)
-    end
-    def past_trips
     end
 
     private

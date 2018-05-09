@@ -1,0 +1,23 @@
+<div class="white-box">
+    <div class="turquoise-box">
+    </div>
+
+<% if @current_trips.any? || @upcoming_trips.any? || @past_trips.any? %>
+    
+    <% if @current_trips.any? %>
+        <%= render "trips/current_trip" %>
+    <% end %>
+
+    <% if @upcoming_trips.any? %>
+        <%= render "trips/upcoming_trips" %>
+    <% end %>
+
+    <% if @past_trips.any? %>
+        <%= render "trips/past_trips" %>
+    <% end %>
+
+<% else %>
+    
+    <%= render "trips/no_trips_display" %>
+
+<% end %>

@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+( document ).addEventListener('turbolinks:load', function() {
     $( "#welcome-submit" ).click(function(event) {
         event.preventDefault();
         console.log("working")
